@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Natan Schons is a Brazilian Data Scientist and AI Engineer at SAP building LLM-powered systems, RAG pipelines, and enterprise AI. Currently building obriefing.com.br.">
+  <meta name="description"
+    content="Natan Schons is a Brazilian Data Scientist and AI Engineer at SAP building LLM-powered systems, RAG pipelines, and enterprise AI. Currently building obriefing.com.br.">
   <meta name="author" content="Natan Schons">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://schonsnatan.github.io/">
 
   <!-- Favicons: inline SVG always resolves; .ico kept as a fallback for older browsers -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23fff'%3ENS%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23fff'%3ENS%3C/text%3E%3C/svg%3E"
+    type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="any">
 
   <title>Natan Schons | Data Scientist &amp; AI Engineer</title>
@@ -17,21 +21,15 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Natan Schons">
   <meta property="og:title" content="Natan Schons | Data Scientist &amp; AI Engineer">
-  <meta property="og:description" content="Natan Schons is a Brazilian Data Scientist and AI Engineer at SAP, building LLM-powered systems, RAG pipelines, and enterprise AI solutions.">
+  <meta property="og:description"
+    content="Natan Schons is a Brazilian Data Scientist and AI Engineer at SAP, building LLM-powered systems, RAG pipelines, and enterprise AI solutions.">
   <meta property="og:url" content="https://schonsnatan.github.io">
   <meta property="og:image" content="https://schonsnatan.github.io/profile-picture.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Natan Schons | Data Scientist &amp; AI Engineer">
-  <meta name="twitter:description" content="Data Scientist at SAP. Building obriefing.com.br. LLMs, RAG, enterprise AI.">
+  <meta name="twitter:description"
+    content="Data Scientist at SAP. Building obriefing.com.br. LLMs, RAG, enterprise AI.">
   <meta name="twitter:image" content="https://schonsnatan.github.io/profile-picture.jpg">
-
-  <!-- Apply saved theme before first paint to avoid a flash -->
-  <script>
-    try {
-      var t = localStorage.getItem("theme");
-      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
-    } catch (e) {}
-  </script>
 
   <script type="application/ld+json">
   {
@@ -93,10 +91,10 @@
       --paper: #ffffff;
       --ink: #111111;
       --soft-ink: #5c5c5c;
-      --rule: #161616;
-      --quiet-rule: #d8d8d8;
-      --portrait-bg: #e8e8e8;
-      --portrait-blend: multiply;
+      --rule: #e5e5e5;
+      --quiet-rule: #f0f0f0;
+      --portrait-bg: #f5f5f5;
+      --portrait-blend: normal;
       --page-gutter: clamp(1.25rem, 4vw, 4.5rem);
       --header-h: 4.25rem;
       --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -104,34 +102,14 @@
       --serif: Iowan Old Style, Baskerville, "Times New Roman", Times, serif;
     }
 
-    /* Dark theme: follows the system unless the visitor picked light */
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        color-scheme: dark;
-        --paper: #0e0e0e;
-        --ink: #f1f1f1;
-        --soft-ink: #a3a3a3;
-        --rule: #e4e4e4;
-        --quiet-rule: #2f2f2f;
-        --portrait-bg: #1b1b1b;
-        --portrait-blend: normal;
-      }
+    * {
+      box-sizing: border-box;
     }
 
-    /* Dark theme: explicit choice via the toggle */
-    :root[data-theme="dark"] {
-      color-scheme: dark;
-      --paper: #0e0e0e;
-      --ink: #f1f1f1;
-      --soft-ink: #a3a3a3;
-      --rule: #e4e4e4;
-      --quiet-rule: #2f2f2f;
-      --portrait-bg: #1b1b1b;
-      --portrait-blend: normal;
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-h) + 0.5rem);
     }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 0.5rem); }
 
     body {
       margin: 0;
@@ -148,7 +126,11 @@
       text-underline-offset: 0.16em;
       text-decoration-thickness: 1px;
     }
-    a:hover { text-decoration-thickness: 2px; }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
     a:focus-visible,
     button:focus-visible {
       outline: 2px solid var(--ink);
@@ -158,7 +140,6 @@
     /* ── Shared mono label style ── */
     .wordmark,
     .site-nav a,
-    .theme-toggle,
     .section-index,
     .eyebrow,
     .product-kicker,
@@ -191,6 +172,67 @@
       border-bottom: 1px solid var(--rule);
     }
 
+    .scroll-progress {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: var(--ink);
+      z-index: 12;
+      transition: width 80ms ease-out;
+      pointer-events: none;
+    }
+
+    /* ── Entrance & Scroll Animations ── */
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroScaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.92) translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .animate-hero-1 {
+      animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+    }
+    .animate-hero-2 {
+      animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+    }
+    .animate-hero-3 {
+      animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+    }
+    .animate-hero-4 {
+      animation: heroScaleIn 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .wordmark {
       font-size: 0.8rem;
       letter-spacing: 0.11em;
@@ -210,8 +252,10 @@
       padding: 0.35rem 0;
       border-bottom: 1px solid transparent;
     }
+
     .site-nav a:hover,
-    .site-nav a:focus-visible {
+    .site-nav a:focus-visible,
+    .site-nav a.active {
       color: var(--ink);
       border-bottom-color: var(--ink);
     }
@@ -221,15 +265,6 @@
       align-items: center;
       gap: 0.75rem;
     }
-
-    .theme-toggle {
-      padding: 0.5rem 0.7rem;
-      color: var(--ink);
-      background: transparent;
-      border: 1px solid var(--quiet-rule);
-      cursor: pointer;
-    }
-    .theme-toggle:hover { border-color: var(--ink); }
 
     /* ── Buttons ── */
     .btn {
@@ -249,17 +284,39 @@
       white-space: nowrap;
       transition: background-color 170ms ease, color 170ms ease;
     }
-    .btn:hover { color: var(--ink); background: transparent; text-decoration: none; }
-    .btn-ghost { color: var(--ink); background: transparent; }
-    .btn-ghost:hover { color: var(--paper); background: var(--ink); }
-    .btn-small { padding: 0.55rem 0.85rem; font-size: 0.72rem; }
 
-    .btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn:hover {
+      color: var(--ink);
+      background: transparent;
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .btn-ghost:hover {
+      color: var(--paper);
+      background: var(--ink);
+    }
+
+    .btn-small {
+      padding: 0.55rem 0.85rem;
+      font-size: 0.72rem;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
 
     /* ── Hero ── */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(15rem, 0.88fr);
+      grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+      grid-template-columns: minmax(0, 1.12fr) minmax(20rem, 0.88fr);
       min-height: min(34rem, 72svh);
       border-bottom: 1px solid var(--rule);
     }
@@ -272,9 +329,15 @@
       padding: clamp(1.5rem, 4vw, 3rem) var(--page-gutter) clamp(1.5rem, 3vw, 2rem);
     }
 
-    .eyebrow { margin: 0; }
+    .eyebrow {
+      margin: 0;
+    }
 
-    h1, h2, p { margin-top: 0; }
+    h1,
+    h2,
+    p {
+      margin-top: 0;
+    }
 
     h1 {
       max-width: 9ch;
@@ -298,45 +361,59 @@
       position: relative;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       margin: 0;
-      background: var(--portrait-bg);
+      padding: clamp(2rem, 4vw, 3.5rem);
+      background: var(--paper);
       border-left: 1px solid var(--rule);
-      overflow: hidden;
-      aspect-ratio: 3 / 4;
     }
 
-    .portrait::after {
+    .portrait-frame {
+      position: relative;
+      width: clamp(13rem, 18vw, 17.5rem);
+      width: clamp(18rem, 24vw, 24.5rem);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--portrait-bg);
+      border: 1px solid var(--rule);
+      box-shadow: 0 0 0 6px var(--paper), 0 0 0 7px var(--rule);
+      box-shadow: 0 0 0 7px var(--paper), 0 0 0 8px var(--rule);
+    }
+
+    .portrait-frame::after {
       position: absolute;
       inset: 0;
-      background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+      border-radius: 50%;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
       background-size: 100% 4px;
       content: "";
       pointer-events: none;
       mix-blend-mode: soft-light;
     }
 
-    .portrait img {
+    .portrait-frame img {
       display: block;
       width: 100%;
       height: 100%;
-      min-height: 18rem;
       object-fit: cover;
-      object-position: center 22%; /* keeps the face in frame on the taller photo */
-      filter: grayscale(1) contrast(1.2) brightness(1.05);
+      object-position: center 20%;
+      /* keeps the face centered in the circular frame */
+      filter: grayscale(1) contrast(1.15) brightness(1.02);
       mix-blend-mode: var(--portrait-blend);
+      border-radius: 50%;
     }
 
     .portrait figcaption {
-      position: absolute;
-      z-index: 1;
-      right: 0;
-      bottom: 0;
-      left: 0;
       display: flex;
       justify-content: space-between;
-      padding: 0.9rem 1rem;
-      color: #fff;
-      background: rgba(0,0,0,0.84);
+      width: clamp(13rem, 18vw, 17.5rem);
+      width: clamp(18rem, 24vw, 24.5rem);
+      margin-top: 1.25rem;
+      padding-top: 0.65rem;
+      color: var(--soft-ink);
+      border-top: 1px solid var(--quiet-rule);
     }
 
     /* ── Proof strip ── */
@@ -353,7 +430,10 @@
       padding: clamp(1.25rem, 2.5vw, 2rem) var(--page-gutter);
       border-right: 1px solid var(--quiet-rule);
     }
-    .proof-item:last-child { border-right: 0; }
+
+    .proof-item:last-child {
+      border-right: 0;
+    }
 
     .proof-figure {
       font-family: var(--serif);
@@ -362,7 +442,10 @@
       line-height: 1;
     }
 
-    .proof-label { color: var(--soft-ink); max-width: 18rem; }
+    .proof-label {
+      color: var(--soft-ink);
+      max-width: 18rem;
+    }
 
     /* ── Sections ── */
     .section {
@@ -378,7 +461,9 @@
       color: var(--soft-ink);
     }
 
-    .section-body { min-width: 0; }
+    .section-body {
+      min-width: 0;
+    }
 
     h2 {
       max-width: 16ch;
@@ -403,13 +488,91 @@
       line-height: 1.45;
     }
 
+    /* ── Focus Areas / Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1.5rem, 3.5vw, 3.5rem);
+      max-width: 63rem;
+      margin-top: clamp(2.5rem, 5vw, 4rem);
+      padding-top: clamp(2rem, 4vw, 3rem);
+      border-top: 1px solid var(--quiet-rule);
+    }
+
+    .skills-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skills-category {
+      display: block;
+      margin-bottom: 1rem;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .skills-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skills-list li {
+      font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+      color: var(--soft-ink);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--quiet-rule);
+      line-height: 1.35;
+    }
+
+    .skills-list li:last-child {
+      border-bottom: none;
+    }
+
     /* ── oBriefing feature section ── */
     .status-pill {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
       margin-bottom: 1.5rem;
-      padding: 0.3rem 0.6rem;
+      padding: 0.35rem 0.65rem;
       color: var(--soft-ink);
       border: 1px solid var(--quiet-rule);
+      background: var(--paper);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      position: relative;
+    }
+
+    .status-dot::after {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      background: #10b981;
+      opacity: 0.5;
+      animation: pulse-dot 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scale(2.4);
+        opacity: 0;
+      }
     }
 
     .ob-grid {
@@ -450,7 +613,10 @@
       border-bottom: 1px solid var(--quiet-rule);
     }
 
-    .feature-num { color: var(--soft-ink); padding-top: 0.35rem; }
+    .feature-num {
+      color: var(--soft-ink);
+      padding-top: 0.35rem;
+    }
 
     .feature-title {
       display: block;
@@ -461,10 +627,17 @@
       line-height: 1;
     }
 
-    .feature-desc { margin: 0; font-size: 0.98rem; line-height: 1.4; color: var(--soft-ink); }
+    .feature-desc {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.4;
+      color: var(--soft-ink);
+    }
 
     /* ── Contact / links ── */
-    .contact { padding-bottom: 0; }
+    .contact {
+      padding-bottom: 0;
+    }
 
     .contact-lead {
       max-width: 34rem;
@@ -474,7 +647,9 @@
       line-height: 1.25;
     }
 
-    .contact .btn-row { margin-bottom: clamp(2.5rem, 5vw, 4.75rem); }
+    .contact .btn-row {
+      margin-bottom: clamp(2.5rem, 5vw, 4.75rem);
+    }
 
     .product-list {
       margin: 0 calc(var(--page-gutter) * -1);
@@ -483,8 +658,13 @@
       border-top: 1px solid var(--rule);
     }
 
-    .product-list li { border-bottom: 1px solid var(--rule); }
-    .product-list li:last-child { border-bottom: 0; }
+    .product-list li {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .product-list li:last-child {
+      border-bottom: 0;
+    }
 
     .product-link {
       display: grid;
@@ -502,12 +682,19 @@
       background: var(--ink);
     }
 
-    .product-link:focus-visible { outline-offset: -5px; outline-color: var(--paper); }
+    .product-link:focus-visible {
+      outline-offset: -5px;
+      outline-color: var(--paper);
+    }
 
-    .product-kicker { color: var(--soft-ink); }
+    .product-kicker {
+      color: var(--soft-ink);
+    }
 
     .product-link:hover .product-kicker,
-    .product-link:focus-visible .product-kicker { color: inherit; }
+    .product-link:focus-visible .product-kicker {
+      color: inherit;
+    }
 
     .product-name {
       font-family: var(--serif);
@@ -529,7 +716,9 @@
     }
 
     .product-link:hover .arrow,
-    .product-link:focus-visible .arrow { transform: translateX(0.35rem); }
+    .product-link:focus-visible .arrow {
+      transform: translateX(0.35rem);
+    }
 
     /* ── Writing section ── */
     .writing-grid {
@@ -539,7 +728,7 @@
       align-items: start;
     }
 
-    .article-entry + .article-entry {
+    .article-entry+.article-entry {
       margin-top: 2.25rem;
       padding-top: 2.25rem;
       border-top: 1px solid var(--quiet-rule);
@@ -592,7 +781,11 @@
       text-decoration: none;
       text-transform: uppercase;
     }
-    .text-link::after { content: "↗"; font-size: 1.1rem; }
+
+    .text-link::after {
+      content: "↗";
+      font-size: 1.1rem;
+    }
 
     /* ── Footer ── */
     .site-footer {
@@ -604,7 +797,10 @@
       border-top: 1px solid var(--rule);
     }
 
-    .footer-note { margin: 0; color: var(--soft-ink); }
+    .footer-note {
+      margin: 0;
+      color: var(--soft-ink);
+    }
 
     .back-top {
       font-family: var(--mono);
@@ -616,14 +812,27 @@
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
-      .proof { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .proof-item:nth-child(2) { border-right: 0; }
-      .proof-item:nth-child(-n+2) { border-bottom: 1px solid var(--quiet-rule); }
-      .ob-grid { grid-template-columns: 1fr; }
+      .proof {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .proof-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .proof-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--quiet-rule);
+      }
+
+      .ob-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 720px) {
-      :root { --header-h: 6.25rem; }
+      :root {
+        --header-h: 6.25rem;
+      }
 
       .site-header {
         flex-wrap: wrap;
@@ -631,6 +840,7 @@
         padding-top: 0.75rem;
         padding-bottom: 0.5rem;
       }
+
       .site-nav {
         order: 3;
         width: 100%;
@@ -638,7 +848,10 @@
         gap: 1.25rem;
         overflow-x: auto;
       }
-      .header-actions { margin-left: auto; }
+
+      .header-actions {
+        margin-left: auto;
+      }
 
       .hero {
         display: flex;
@@ -646,15 +859,28 @@
         min-height: 0;
       }
 
-      .hero-copy { min-height: 22rem; }
-      h1 { margin: 4.5rem 0; }
+      .hero-copy {
+        min-height: 22rem;
+      }
+
+      h1 {
+        margin: 4.5rem 0;
+      }
 
       .portrait {
-        min-height: 27rem;
+        min-height: 0;
+        padding: clamp(2.5rem, 6vw, 3.5rem) var(--page-gutter);
         border-top: 1px solid var(--rule);
         border-left: 0;
       }
-      .portrait img { min-height: 27rem; }
+
+      .portrait-frame {
+        width: clamp(15rem, 55vw, 20rem);
+      }
+
+      .portrait figcaption {
+        width: clamp(15rem, 55vw, 20rem);
+      }
 
       .section {
         display: block;
@@ -662,27 +888,64 @@
         padding-bottom: 4rem;
       }
 
-      .section-index { margin-bottom: 3.5rem; }
-      h2 { margin-bottom: 2.5rem; }
+      .section-index {
+        margin-bottom: 3.5rem;
+      }
+
+      h2 {
+        margin-bottom: 2.5rem;
+      }
 
       .about-copy,
-      .writing-grid { grid-template-columns: 1fr; }
+      .skills-grid,
+      .writing-grid {
+        grid-template-columns: 1fr;
+      }
 
-      .contact { padding-bottom: 0; }
+      .contact {
+        padding-bottom: 0;
+      }
 
       .product-link {
         grid-template-columns: 1fr auto;
         gap: 0.75rem 1rem;
       }
 
-      .product-kicker { grid-column: 1 / -1; }
-      .product-description { grid-column: 1 / 2; }
-      .arrow { grid-column: 2; grid-row: 2 / span 2; align-self: center; }
+      .product-kicker {
+        grid-column: 1 / -1;
+      }
+
+      .product-description {
+        grid-column: 1 / 2;
+      }
+
+      .arrow {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        align-self: center;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .product-link, .arrow, .btn { transition: none; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      .product-link,
+      .arrow,
+      .btn,
+      .reveal,
+      .scroll-progress,
+      .animate-hero-1,
+      .animate-hero-2,
+      .animate-hero-3,
+      .animate-hero-4,
+      .status-dot::after {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
     }
   </style>
 </head>
@@ -690,6 +953,7 @@
 <body>
 
   <header class="site-header">
+    <div class="scroll-progress" aria-hidden="true"></div>
     <a class="wordmark" href="#top" aria-label="Natan Schons, back to top">Natan Schons</a>
 
     <nav class="site-nav" aria-label="Primary">
@@ -700,7 +964,7 @@
     </nav>
 
     <div class="header-actions">
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">Dark</button>
+      <a class="btn btn-small btn-ghost" href="resume.pdf" target="_blank" rel="noreferrer noopener">CV ↓</a>
       <a class="btn btn-small" href="mailto:natanschonsoficial@gmail.com?subject=Hello%20Natan">Get in touch</a>
     </div>
   </header>
@@ -710,10 +974,11 @@
     <!-- ── Hero ── -->
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
-        <p class="eyebrow">Profile / 2026</p>
-        <h1 id="page-title">Natan<br>Schons</h1>
-        <div class="hero-statement-block">
-          <p class="hero-statement">Natan Schons is a Data Scientist at SAP building intelligent solutions for enterprise AI, specialising in RAG and GraphRAG pipelines, LLM orchestration, and Knowledge Graphs.</p>
+        <p class="eyebrow animate-hero-1">Profile / 2026</p>
+        <h1 id="page-title" class="animate-hero-2">Natan<br>Schons</h1>
+        <div class="hero-statement-block animate-hero-3">
+          <p class="hero-statement">Natan Schons is a Data Scientist at SAP building intelligent solutions for
+            enterprise AI, specialising in RAG and GraphRAG pipelines, LLM orchestration, and Knowledge Graphs.</p>
           <div class="btn-row">
             <a class="btn" href="#obriefing">See what I'm building</a>
             <a class="btn btn-ghost" href="mailto:natanschonsoficial@gmail.com?subject=Hello%20Natan">Get in touch</a>
@@ -721,62 +986,104 @@
         </div>
       </div>
 
-      <figure class="portrait">
+      <figure class="portrait animate-hero-4">
         <!-- Above the fold, so no loading="lazy": width/height reserve space, fetchpriority speeds up the first paint. -->
-        <img src="profile-picture.jpg" alt="Portrait of Natan Schons" width="1200" height="1800" fetchpriority="high" decoding="async">
+        <div class="portrait-frame">
+          <img src="profile-picture.jpg" alt="Portrait of Natan Schons" width="1200" height="1800" fetchpriority="high"
+            decoding="async">
+        </div>
         <figcaption><span>Natan Schons</span><span>0001 / B&amp;W</span></figcaption>
       </figure>
     </section>
 
     <!-- ── Highlights ── -->
     <section class="proof" aria-label="Highlights">
-      <div class="proof-item">
-        <span class="proof-figure">4+</span>
+      <div class="proof-item reveal">
+        <span class="proof-figure"><span class="counter" data-target="5">5</span>+</span>
         <span class="proof-label">Years in IT</span>
       </div>
-      <div class="proof-item">
-        <span class="proof-figure">30+</span>
+      <div class="proof-item reveal">
+        <span class="proof-figure"><span class="counter" data-target="30">30</span>+</span>
         <span class="proof-label">Global clients as Analytics Consultant at SAP</span>
       </div>
-      <div class="proof-item">
+      <div class="proof-item reveal">
         <span class="proof-figure">Data & AI</span>
         <span class="proof-label">Building AI-powered Applications</span>
       </div>
-      <div class="proof-item">
-        <span class="proof-figure">4</span>
+      <div class="proof-item reveal">
+        <span class="proof-figure"><span class="counter" data-target="4">4</span></span>
         <span class="proof-label">Languages: PT · EN · DE · ES</span>
       </div>
     </section>
 
     <!-- ── 01 / About ── -->
     <section class="section" id="about" aria-labelledby="about-title">
-      <p class="section-index">01 / About</p>
+      <p class="section-index reveal">01 / About</p>
       <div class="section-body">
-        <h2 id="about-title">Engineering, AI &amp; enterprise data.</h2>
-        <div class="about-copy">
-          <p>Natan is a Data Scientist at SAP, working in the Language Experience Lab to evolve AI-powered translation solutions for SAP products across multiple languages globally. His path combines rigorous AI engineering with deep knowledge of the SAP ecosystem. Previously an Analytics Consultant at SAP, working with 30+ global clients on SAP Datasphere, SAP Analytics Cloud, and AI-powered analytics.</p>
-          <p>With 4+ years in IT, he works daily with LLMs, RAG pipelines, Knowledge Graphs, Ontologies, embeddings, and vector stores, integrated with SAP BTP and SAP AI Core. He contributes to strategic AI initiatives and state-of-the-art Prompt Engineering research within SAP. Fluent in Portuguese, English, German, and Spanish.</p>
+        <h2 id="about-title" class="reveal">Engineering, AI &amp; enterprise data.</h2>
+        <div class="about-copy reveal">
+          <p>Natan is a Data Scientist at SAP, working in the Language Experience Lab to evolve AI-powered translation
+            solutions for SAP products across multiple languages globally. His path combines rigorous AI engineering
+            with deep knowledge of the SAP ecosystem. Previously an Analytics Consultant at SAP, working with 30+ global
+            clients on SAP Datasphere, SAP Analytics Cloud, and AI-powered analytics.</p>
+          <p>With 5+ years in IT, he works daily with LLMs, RAG pipelines, Knowledge Graphs, Ontologies, embeddings, and
+            vector stores, integrated with SAP BTP and SAP AI Core. He contributes to strategic AI initiatives and
+            state-of-the-art Prompt Engineering research within SAP. Fluent in Portuguese, English, German, and Spanish.
+          </p>
+        </div>
+
+        <div class="skills-grid reveal" aria-label="Core Technical Areas">
+          <div class="skills-col">
+            <span class="skills-category">Core AI &amp; LLMs</span>
+            <ul class="skills-list">
+              <li>RAG &amp; GraphRAG Pipelines</li>
+              <li>Knowledge Graphs &amp; Ontologies</li>
+              <li>Embeddings &amp; Vector Stores</li>
+              <li>Prompt Engineering &amp; LLM Evals</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <span class="skills-category">Enterprise &amp; Cloud</span>
+            <ul class="skills-list">
+              <li>SAP BTP &amp; SAP AI Core</li>
+              <li>SAP Datasphere &amp; SAC</li>
+              <li>Python, PydanticAI &amp; Langchain</li>
+              <li>Scalable ML &amp; API Architecture</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <span class="skills-category">Languages &amp; Global</span>
+            <ul class="skills-list">
+              <li>Portuguese (Native)</li>
+              <li>English (Fluent)</li>
+              <li>German (Proficient)</li>
+              <li>Spanish (Proficient)</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ── 02 / oBriefing ── -->
     <section class="section" id="obriefing" aria-labelledby="obriefing-title">
-      <p class="section-index">02 / Building</p>
+      <p class="section-index reveal">02 / Building</p>
       <div class="section-body">
-        <span class="status-pill">In active development</span>
-        <h2 id="obriefing-title">oBriefing.</h2>
+        <span class="status-pill reveal"><span class="status-dot" aria-hidden="true"></span>In active development</span>
+        <h2 id="obriefing-title" class="reveal">oBriefing.</h2>
 
         <div class="ob-grid">
-          <div>
+          <div class="reveal">
             <p class="ob-lead">Clipping shows what already ran. The Radar shows where your client can step in.</p>
-            <p class="ob-copy">An AI-powered media intelligence platform for PR and communications agencies in Brazil. It watches the news portals so the team starts the day with the coverage and the openings that matter for each client.</p>
+            <p class="ob-copy">An AI-powered media intelligence platform for PR and communications agencies in Brazil.
+              It watches the news portals so the team starts the day with the coverage and the openings that matter for
+              each client.</p>
             <div class="btn-row">
-              <a class="btn" href="https://obriefing.com.br" target="_blank" rel="noreferrer noopener">Visit obriefing.com.br ↗</a>
+              <a class="btn" href="https://obriefing.com.br" target="_blank" rel="noreferrer noopener">Visit
+                obriefing.com.br ↗</a>
             </div>
           </div>
 
-          <ol class="feature-list">
+          <ol class="feature-list reveal">
             <li>
               <span class="feature-num">01</span>
               <div>
@@ -812,31 +1119,36 @@
 
     <!-- ── 03 / Writing ── -->
     <section class="section" id="writing" aria-labelledby="writing-title">
-      <p class="section-index">03 / Writing</p>
+      <p class="section-index reveal">03 / Writing</p>
       <div class="section-body">
-        <h2 id="writing-title">Latest<br>articles.</h2>
+        <h2 id="writing-title" class="reveal">Latest<br>articles.</h2>
         <div class="writing-grid">
-          <div>
+          <div class="reveal">
 
             <article class="article-entry">
-              <!-- TODO: add the publish date next to the topic, e.g. "AI Engineering · Mar 2026" -->
-              <span class="article-meta">AI Engineering</span>
-              <p class="article-copy"><a href="https://medium.com/@natanschons/using-classic-design-patterns-to-build-scalable-ai-systems-e4c812224aaa" target="_blank" rel="noreferrer noopener">Using Classic Design Patterns to Build Scalable AI Systems</a></p>
+              <span class="article-meta">AI Engineering · Feb 2026</span>
+              <p class="article-copy"><a
+                  href="https://medium.com/@natanschons/using-classic-design-patterns-to-build-scalable-ai-systems-e4c812224aaa"
+                  target="_blank" rel="noreferrer noopener">Using Classic Design Patterns to Build Scalable AI
+                  Systems</a></p>
               <span class="article-link-row">Read on Medium ↗</span>
             </article>
 
             <article class="article-entry">
-              <!-- TODO: add the publish date next to the topic -->
-              <span class="article-meta">RAG · LLMs</span>
-              <p class="article-copy"><a href="https://medium.com/@natanschons/mastering-retrieval-optimization-and-evaluation-metrics-in-your-rag-pipeline-5fca37d755e1" target="_blank" rel="noreferrer noopener">Mastering Retrieval Optimization and Evaluation Metrics in your RAG Pipeline</a></p>
+              <span class="article-meta">RAG · LLMs · Jan 2026</span>
+              <p class="article-copy"><a
+                  href="https://medium.com/@natanschons/mastering-retrieval-optimization-and-evaluation-metrics-in-your-rag-pipeline-5fca37d755e1"
+                  target="_blank" rel="noreferrer noopener">Mastering Retrieval Optimization and Evaluation Metrics in
+                  your RAG Pipeline</a></p>
               <span class="article-link-row">Read on Medium ↗</span>
             </article>
 
           </div>
 
-          <aside class="writing-aside" aria-label="All writing on Medium">
+          <aside class="writing-aside reveal" aria-label="All writing on Medium">
             <p>Writing about what I build, what I learn, and what actually works in production AI.</p>
-            <a class="text-link" href="https://medium.com/@natanschons" target="_blank" rel="noreferrer noopener">Read all on Medium</a>
+            <a class="text-link" href="https://medium.com/@natanschons" target="_blank" rel="noreferrer noopener">Read
+              all on Medium</a>
           </aside>
         </div>
       </div>
@@ -844,29 +1156,36 @@
 
     <!-- ── 04 / Contact ── -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <p class="section-index">04 / Contact</p>
+      <p class="section-index reveal">04 / Contact</p>
       <div class="section-body">
-        <h2 id="contact-title">Let's talk.</h2>
-        <p class="contact-lead">Enterprise AI, NLP, ML, RAG and knowledge graphs, or oBriefing: write to me and I'll get back to you.</p>
-        <div class="btn-row">
-          <a class="btn" href="mailto:natanschonsoficial@gmail.com?subject=Hello%20Natan">natanschonsoficial@gmail.com</a>
+        <h2 id="contact-title" class="reveal">Let's talk.</h2>
+        <p class="contact-lead reveal">Enterprise AI, NLP, ML, RAG and knowledge graphs, or oBriefing: write to me and I'll get
+          back to you.</p>
+        <div class="btn-row reveal">
+          <a class="btn"
+            href="mailto:natanschonsoficial@gmail.com?subject=Hello%20Natan">natanschonsoficial@gmail.com</a>
+          <button class="btn btn-ghost copy-email-btn" type="button" aria-label="Copy email address to clipboard">Copy
+            address</button>
         </div>
 
-        <ul class="product-list">
+        <ul class="product-list reveal">
           <li>
             <a class="product-link" href="https://github.com/schonsnatan" target="_blank" rel="noreferrer noopener">
               <span class="product-kicker">01 / Code</span>
               <span class="product-name">GitHub</span>
-              <span class="product-description">Personal projects spanning RAG systems, ML APIs, SQL pipelines, and applied AI experiments.</span>
+              <span class="product-description">Personal projects spanning RAG systems, ML APIs, SQL pipelines, and
+                applied AI experiments.</span>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
           </li>
 
           <li>
-            <a class="product-link" href="https://linkedin.com/in/natanschons" target="_blank" rel="noreferrer noopener">
+            <a class="product-link" href="https://linkedin.com/in/natanschons" target="_blank"
+              rel="noreferrer noopener">
               <span class="product-kicker">02 / Network</span>
               <span class="product-name">LinkedIn</span>
-              <span class="product-description">Professional presence and career updates within the SAP and AI engineering ecosystem.</span>
+              <span class="product-description">Professional presence and career updates within the SAP and AI
+                engineering ecosystem.</span>
               <span class="arrow" aria-hidden="true">→</span>
             </a>
           </li>
@@ -875,8 +1194,19 @@
             <a class="product-link" href="https://medium.com/@natanschons" target="_blank" rel="noreferrer noopener">
               <span class="product-kicker">03 / Writing</span>
               <span class="product-name">Medium</span>
-              <span class="product-description">Articles on Data Science, Machine Learning, and AI, written for engineers who care about the craft.</span>
+              <span class="product-description">Articles on Data Science, Machine Learning, and AI, written for
+                engineers who care about the craft.</span>
               <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="product-link" href="resume.pdf" target="_blank" rel="noreferrer noopener">
+              <span class="product-kicker">04 / Credentials</span>
+              <span class="product-name">Curriculum Vitae</span>
+              <span class="product-description">Detailed overview of professional background, enterprise AI
+                architecture, and milestones.</span>
+              <span class="arrow" aria-hidden="true">↓</span>
             </a>
           </li>
         </ul>
@@ -894,33 +1224,125 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     (function () {
-      var root = document.documentElement;
-      var btn = document.querySelector(".theme-toggle");
-      var mq = window.matchMedia("(prefers-color-scheme: dark)");
-
-      function current() {
-        var t = root.getAttribute("data-theme");
-        return t ? t : (mq.matches ? "dark" : "light");
+      // ── Scroll progress bar ──
+      var progressBar = document.querySelector(".scroll-progress");
+      if (progressBar) {
+        window.addEventListener("scroll", function () {
+          var scrollTop = window.scrollY || document.documentElement.scrollTop;
+          var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+          progressBar.style.width = Math.min(progress, 100) + "%";
+        }, { passive: true });
       }
 
-      function updateButton() {
-        var dark = current() === "dark";
-        btn.textContent = dark ? "Light" : "Dark";
-        btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
-        btn.setAttribute("aria-pressed", dark ? "true" : "false");
+      // ── Scroll reveal observer ──
+      var reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window && reveals.length) {
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: "0px 0px -50px 0px" });
+
+        reveals.forEach(function (el) { revealObserver.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add("is-visible"); });
       }
 
-      btn.addEventListener("click", function () {
-        var next = current() === "dark" ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("theme", next); } catch (e) {}
-        updateButton();
-      });
+      // ── Number counters animation ──
+      function animateCounters() {
+        var counters = document.querySelectorAll(".counter[data-target]");
+        counters.forEach(function (counter) {
+          var target = parseInt(counter.getAttribute("data-target"), 10);
+          if (isNaN(target)) return;
+          var duration = 1200;
+          var startTime = null;
 
-      if (mq.addEventListener) mq.addEventListener("change", updateButton);
-      updateButton();
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+            var currentVal = Math.floor(ease * target);
+            counter.textContent = currentVal;
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              counter.textContent = target;
+            }
+          }
+          window.requestAnimationFrame(step);
+        });
+      }
+
+      var proofSection = document.querySelector(".proof");
+      if (proofSection && "IntersectionObserver" in window) {
+        var counterObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCounters();
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.25 });
+        counterObserver.observe(proofSection);
+      } else {
+        animateCounters();
+      }
+
+      // ── Copy email with toast feedback ──
+      var copyBtn = document.querySelector(".copy-email-btn");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          var email = "natanschonsoficial@gmail.com";
+          function onCopied() {
+            var prevText = copyBtn.textContent;
+            copyBtn.textContent = "Copied ✓";
+            setTimeout(function () { copyBtn.textContent = prevText; }, 2000);
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(onCopied).catch(function () {
+              window.location.href = "mailto:" + email;
+            });
+          } else {
+            var temp = document.createElement("input");
+            temp.value = email;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            document.body.removeChild(temp);
+            onCopied();
+          }
+        });
+      }
+
+      // ── Active section spy in site nav ──
+      var navLinks = document.querySelectorAll(".site-nav a");
+      var sections = document.querySelectorAll("main section[id]");
+      if ("IntersectionObserver" in window && sections.length && navLinks.length) {
+        var spyObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var targetId = entry.target.getAttribute("id");
+              navLinks.forEach(function (link) {
+                if (link.getAttribute("href") === "#" + targetId) {
+                  link.classList.add("active");
+                } else {
+                  link.classList.remove("active");
+                }
+              });
+            }
+          });
+        }, { rootMargin: "-25% 0px -60% 0px" });
+
+        sections.forEach(function (s) { spyObserver.observe(s); });
+      }
     })();
   </script>
 
 </body>
+
 </html>
